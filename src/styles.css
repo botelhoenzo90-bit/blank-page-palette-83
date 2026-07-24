@@ -140,5 +140,167 @@
   body {
     background-color: var(--color-background);
     color: var(--color-foreground);
+    font-family: "Inter", ui-sans-serif, system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
   }
+}
+
+/* ============================================================
+   Portfolio themes — each section wrapper scopes its own tokens
+   ============================================================ */
+
+.theme {
+  --t-bg: #ffffff;
+  --t-fg: #0a0a0a;
+  --t-muted: #6b7280;
+  --t-surface: #f5f5f5;
+  --t-accent: #0a0a0a;
+  --t-accent-fg: #ffffff;
+  --t-border: rgba(0, 0, 0, 0.08);
+  --t-display: "Fraunces", "Playfair Display", serif;
+  --t-body: "Inter", system-ui, sans-serif;
+  background: var(--t-bg);
+  color: var(--t-fg);
+  font-family: var(--t-body);
+}
+
+.theme h1, .theme h2, .theme h3 { font-family: var(--t-display); letter-spacing: -0.02em; }
+
+/* 1. Odontologia — clean mint & white, medical-modern */
+.theme-dental {
+  --t-bg: #f5f9f8;
+  --t-fg: #0e2a2a;
+  --t-muted: #5a7373;
+  --t-surface: #ffffff;
+  --t-accent: #2fb39a;
+  --t-accent-fg: #ffffff;
+  --t-border: rgba(14, 42, 42, 0.08);
+  --t-display: "Fraunces", serif;
+}
+
+/* 2. Estética — luxury pink & rose gold */
+.theme-estetica {
+  --t-bg: #fbf3ef;
+  --t-fg: #3a1f22;
+  --t-muted: #8a6167;
+  --t-surface: #ffffff;
+  --t-accent: #c9877a;
+  --t-accent-fg: #ffffff;
+  --t-border: rgba(58, 31, 34, 0.1);
+  --t-display: "Cormorant Garamond", serif;
+}
+
+/* 3. Solar — deep blue & solar gold */
+.theme-solar {
+  --t-bg: #0b1e33;
+  --t-fg: #f5f0e6;
+  --t-muted: #94a8bd;
+  --t-surface: #14304d;
+  --t-accent: #f5b942;
+  --t-accent-fg: #0b1e33;
+  --t-border: rgba(245, 240, 230, 0.12);
+  --t-display: "Space Grotesk", sans-serif;
+}
+
+/* 4. Advogado — noir & gold, editorial */
+.theme-advogado {
+  --t-bg: #0d0d0d;
+  --t-fg: #eae2c9;
+  --t-muted: #9c927a;
+  --t-surface: #1a1a1a;
+  --t-accent: #c9a84c;
+  --t-accent-fg: #0d0d0d;
+  --t-border: rgba(234, 226, 201, 0.14);
+  --t-display: "DM Serif Display", serif;
+}
+
+/* 5. Aluguel de carros — brutalist black & neon red */
+.theme-carros {
+  --t-bg: #0a0a0a;
+  --t-fg: #f5f5f5;
+  --t-muted: #8a8a8a;
+  --t-surface: #141414;
+  --t-accent: #ff2d3d;
+  --t-accent-fg: #ffffff;
+  --t-border: rgba(245, 245, 245, 0.12);
+  --t-display: "Archivo Black", sans-serif;
+  --t-body: "Space Grotesk", sans-serif;
+}
+
+/* 6. Manicure — soft blush & warm cream */
+.theme-manicure {
+  --t-bg: #fdf6f2;
+  --t-fg: #4a2f30;
+  --t-muted: #9c7d7a;
+  --t-surface: #ffffff;
+  --t-accent: #e88aab;
+  --t-accent-fg: #ffffff;
+  --t-border: rgba(74, 47, 48, 0.1);
+  --t-display: "Playfair Display", serif;
+}
+
+/* 7. Academia — high-energy orange on charcoal */
+.theme-academia {
+  --t-bg: #131313;
+  --t-fg: #f5f5f5;
+  --t-muted: #a0a0a0;
+  --t-surface: #1e1e1e;
+  --t-accent: #ff5722;
+  --t-accent-fg: #ffffff;
+  --t-border: rgba(245, 245, 245, 0.12);
+  --t-display: "Bebas Neue", sans-serif;
+  --t-body: "Space Grotesk", sans-serif;
+}
+
+/* 8. Restaurante — warm burgundy & cream, editorial */
+.theme-restaurante {
+  --t-bg: #f5eee3;
+  --t-fg: #2a1512;
+  --t-muted: #7a5a52;
+  --t-surface: #ffffff;
+  --t-accent: #8a2c25;
+  --t-accent-fg: #f5eee3;
+  --t-border: rgba(42, 21, 18, 0.12);
+  --t-display: "Playfair Display", serif;
+}
+
+/* Utility bits */
+.eyebrow {
+  font-family: var(--t-body);
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--t-muted);
+}
+
+.t-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--t-accent);
+  color: var(--t-accent-fg);
+  padding: 0.95rem 1.75rem;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+.t-btn:hover { transform: translateY(-2px); opacity: 0.92; }
+
+.t-btn-outline {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  border: 1px solid currentColor;
+  padding: 0.9rem 1.7rem;
+  border-radius: 999px;
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+
+.theme-divider {
+  height: 1px;
+  background: linear-gradient(to right, transparent, currentColor, transparent);
+  opacity: 0.12;
 }
