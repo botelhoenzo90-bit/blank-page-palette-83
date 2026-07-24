@@ -190,15 +190,16 @@
   --t-display: "Cormorant Garamond", serif;
 }
 
-/* 3. Solar — deep blue & solar gold */
+/* 2. Solar — blue, white & orange */
 .theme-solar {
-  --t-bg: #0b1e33;
-  --t-fg: #f5f0e6;
-  --t-muted: #94a8bd;
-  --t-surface: #14304d;
-  --t-accent: #f5b942;
-  --t-accent-fg: #0b1e33;
-  --t-border: rgba(245, 240, 230, 0.12);
+  --t-bg: #ffffff;
+  --t-fg: #0a2540;
+  --t-muted: #5a748f;
+  --t-surface: #f2f7fc;
+  --t-accent: #ff7a1a;
+  --t-accent-fg: #ffffff;
+  --t-second: #0d6efd;
+  --t-border: rgba(10, 37, 64, 0.1);
   --t-display: "Space Grotesk", sans-serif;
 }
 
@@ -264,6 +265,19 @@
   --t-display: "Playfair Display", serif;
 }
 
+/* 9. Limpeza de Ar Condicionado — clean fresh blue/cyan */
+.theme-arcond {
+  --t-bg: #f4f9fb;
+  --t-fg: #082032;
+  --t-muted: #56707e;
+  --t-surface: #ffffff;
+  --t-accent: #0891b2;
+  --t-accent-fg: #ffffff;
+  --t-second: #22d3ee;
+  --t-border: rgba(8, 32, 50, 0.1);
+  --t-display: "Space Grotesk", sans-serif;
+}
+
 /* Utility bits */
 .eyebrow {
   font-family: var(--t-body);
@@ -304,3 +318,26 @@
   background: linear-gradient(to right, transparent, currentColor, transparent);
   opacity: 0.12;
 }
+
+/* Horizontal snap carousel */
+.snap-carousel {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 85%;
+  gap: 1.25rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  padding-bottom: 1.5rem;
+}
+@media (min-width: 768px) { .snap-carousel { grid-auto-columns: 42%; } }
+@media (min-width: 1024px) { .snap-carousel { grid-auto-columns: 30%; } }
+.snap-carousel::-webkit-scrollbar { display: none; }
+.snap-carousel > * { scroll-snap-align: start; }
+
+/* Marquee for logo/trust strip */
+@keyframes marquee-x {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+.marquee-track { animation: marquee-x 30s linear infinite; display: flex; gap: 3rem; width: max-content; }
