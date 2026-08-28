@@ -1,4 +1,4 @@
-/* Dental hero refinements — uses the image supplied by the client */
+/* Dental hero refinements */
 .theme-dental {
   --t-bg: #eaf6ff;
   --t-fg: #12314a;
@@ -13,7 +13,7 @@
 .theme-dental > div:nth-of-type(1) .relative > div:first-child {
   position: relative;
   min-height: 520px;
-  background-image: url('data:image/jpeg;base64,IMAGE_DATA_PLACEHOLDER');
+  background-image: url('https://images.unsplash.com/photo-1606811971618-4486d14f3f99?auto=format&fit=crop&w=1400&q=85');
   background-size: cover;
   background-position: center;
 }
@@ -39,11 +39,7 @@
 }
 
 .theme-dental > div:nth-of-type(1) h1 em { display:none; }
-
-.theme-dental .t-btn {
-  box-shadow: 0 12px 30px rgba(22,141,204,.22);
-}
-
+.theme-dental .t-btn { box-shadow: 0 12px 30px rgba(22,141,204,.22); }
 .theme-dental .eyebrow { color:#5c7f98; }
 
 @media (max-width: 640px) {
