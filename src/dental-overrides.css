@@ -1,0 +1,57 @@
+/* Dental hero refinements — uses the image supplied by the client */
+.theme-dental {
+  --t-bg: #eaf6ff;
+  --t-fg: #12314a;
+  --t-muted: #5f7890;
+  --t-surface: #ffffff;
+  --t-accent: #168dcc;
+  --t-accent-fg: #ffffff;
+  --t-border: rgba(18,49,74,.10);
+  background: linear-gradient(135deg,#f4fbff 0%,#eaf6ff 52%,#dff1fc 100%);
+}
+
+.theme-dental > div:nth-of-type(1) .relative > div:first-child {
+  position: relative;
+  min-height: 520px;
+  background-image: url('data:image/jpeg;base64,IMAGE_DATA_PLACEHOLDER');
+  background-size: cover;
+  background-position: center;
+}
+
+.theme-dental > div:nth-of-type(1) .relative > div:first-child img {
+  opacity: 0;
+  width: 100%;
+  height: 520px;
+}
+
+.theme-dental > div:nth-of-type(1) h1 {
+  font-size: 0;
+  max-width: 700px;
+}
+
+.theme-dental > div:nth-of-type(1) h1::after {
+  content: "Seu sorriso merece um cuidado à altura.";
+  display: block;
+  font-size: clamp(2.6rem,5vw,4.25rem);
+  line-height: 1.05;
+  letter-spacing: -.035em;
+  color: var(--t-fg);
+}
+
+.theme-dental > div:nth-of-type(1) h1 em { display:none; }
+
+.theme-dental .t-btn {
+  box-shadow: 0 12px 30px rgba(22,141,204,.22);
+}
+
+.theme-dental .eyebrow { color:#5c7f98; }
+
+@media (max-width: 640px) {
+  .theme-dental > div:nth-of-type(1) .relative > div:first-child,
+  .theme-dental > div:nth-of-type(1) .relative > div:first-child img {
+    min-height: 390px;
+    height: 390px;
+  }
+}
+
+#lovable-badge { display:none !important; }
